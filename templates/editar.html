@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Alumno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="formulario">
+
+    <h1>Editar Alumno</h1>
+
+    <form method="POST">
+
+        <input type="text" name="matricula"
+               value="{{ alumno[1] }}" required>
+
+        <input type="text" name="nombre"
+               value="{{ alumno[2] }}" required>
+
+        <input type="text" name="apellido_paterno"
+               value="{{ alumno[3] }}" required>
+
+        <input type="text" name="apellido_materno"
+               value="{{ alumno[4] }}" required>
+
+        <input type="number" name="edad"
+               value="{{ alumno[5] }}" required>
+
+        <input type="text" name="semestre"
+               value="{{ alumno[6] }}" required>
+
+        <input type="text" name="grupo"
+               value="{{ alumno[7] }}" required>
+
+        <input type="text" name="carrera"
+               value="{{ alumno[8] }}" required>
+
+        <input type="email" name="correo"
+               value="{{ alumno[9] }}" required>
+
+        <button type="submit">Actualizar</button>
+
+        <a href="/" class="cancelar">Cancelar</a>
+
+    </form>
+
+</div>
+
+</body>
+</html>

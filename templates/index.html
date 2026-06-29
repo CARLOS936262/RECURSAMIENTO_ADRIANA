@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UV - Sistema de Alumnos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="contenedor">
+
+    <h2>Sistema de Administración de Alumnos</h2>
+
+    <a href="/agregar" class="btn">+ Nuevo Alumno</a>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Matrícula</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Edad</th>
+                <th>Semestre</th>
+                <th>Grupo</th>
+                <th>Carrera</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for alumno in alumnos %}
+
+        <tr>
+            <td>{{ alumno[1] }}</td>
+            <td>{{ alumno[2] }}</td>
+            <td>{{ alumno[3] }}</td>
+            <td>{{ alumno[4] }}</td>
+            <td>{{ alumno[5] }}</td>
+            <td>{{ alumno[6] }}</td>
+            <td>{{ alumno[7] }}</td>
+            <td>{{ alumno[8] }}</td>
+            <td>{{ alumno[9] }}</td>
+
+            <td>
+                <a href="/editar/{{ alumno[0] }}" class="editar">Editar</a>
+                <a href="/eliminar/{{ alumno[0] }}"
+                   class="eliminar"
+                   onclick="return confirm('¿Eliminar alumno?')">
+                   Eliminar
+                </a>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+</body>
+</html>

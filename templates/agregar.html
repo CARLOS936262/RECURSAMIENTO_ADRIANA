@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Alumno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="formulario">
+
+    <h1>Registrar Alumno UV</h1>
+
+    <form method="POST">
+
+        <input type="text" name="matricula" placeholder="Matrícula" required>
+
+        <input type="text" name="nombre" placeholder="Nombre" required>
+
+        <input type="text" name="apellido_paterno" placeholder="Apellido Paterno" required>
+
+        <input type="text" name="apellido_materno" placeholder="Apellido Materno" required>
+
+        <input type="number" name="edad" placeholder="Edad" required>
+
+        <input type="text" name="semestre" placeholder="Semestre" required>
+
+        <input type="text" name="grupo" placeholder="Grupo" required>
+
+        <input type="text" name="carrera" placeholder="Carrera" required>
+
+        <input type="email" name="correo" placeholder="Correo Electrónico" required>
+
+        <button type="submit">Guardar</button>
+
+        <a href="/" class="cancelar">Cancelar</a>
+
+    </form>
+
+</div>
+
+</body>
+</html>
